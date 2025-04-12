@@ -1,15 +1,72 @@
-<DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initual-scaled=1.0">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="style.css">
-        <title>Johannes Alfred- Portfolio</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Johannes Alfred, an Electronics and Computer Engineer specializing in software development, AI, embedded systems, and cybersecurity. Explore projects and skills.">
+    <meta name="keywords" content="Johannes Alfred, Electronics Engineer, Computer Engineer, Software Developer, AI, Machine Learning, Embedded Systems, Cybersecurity, Portfolio, Full Stack Developer">
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Johannes Alfred - Portfolio">
+    <meta property="og:description" content="Electronics and Computer Engineer specializing in software development, AI, embedded systems, and cybersecurity.">
+    <meta property="og:image" content="assets/profile_image.jpg"> <!-- Add a URL to an image to show when shared -->
+    <meta property="og:url" content="YOUR_WEBSITE_URL"> <!-- Replace with  live website URL -->
+    <meta property="og:type" content="website">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Loading animation */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease;
+        }
+        
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid var(--main-color);
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            animation: rotation 1s linear infinite;
+        }
+        
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .loader-wrapper.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+
+    <title>Johannes Alfred - Portfolio</title>
     </head>
 
     <body>
+
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
 
         <!-- Header section code -->
 
@@ -23,16 +80,17 @@
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#projects">Projects</a>
-                <a href="#testimonial">Testimonial</a>
+                <!--<a href="#skills">Skills</a>-->
+                <!--<a href="#testimonials">Testimonial</a> -->
                 <a href="#contact">Contact</a>
             </nav>
-
+        
         </header>
 
         <!-- Home section code -->
-        <section class="home" id="home">
-            <div class="home-img">
-                <img src="assets\profile_image.jpg" alt="Profile Image">
+        <section class="home" id="home" data-aos="fade-in" data-aos-duration="1000">
+            <div class="home-img tilt-container" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="500">
+                <img src="assets\profile_image.jpg" alt="Alfred Johannes profile photo">
             </div>
 
             <div class="home-content">
@@ -58,7 +116,7 @@
         </section>
 
         <!-- About section code -->
-        <section class="about" id="about">
+        <section class="about" id="about" data-aos="fade-up" data-aos-duration="1000">
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
                 <h3>I'm a <span>Electronics & Computer Engineer</span></h3>
@@ -90,39 +148,43 @@
             <div class="about-img-gallery">
                 <div class="img-row">
                     <div class="img-container">
-                        <img src="assets\about_image1.jpg" alt="About Image 1">
+                        <img src="assets\about_image1.jpeg" onerror="this.src='placeholder-image.png';" alt="Alfreds Johannes life and/or work images 1" loading="lazy"> 
+
                     </div>
                     <div class="img-container">
-                        <img src="assets\about_image2.jpg" alt="About Image 2">
+                        <img src="assets\about_image2.png" alt="Alfreds Johannes life and/or work images 2" loading="lazy"> 
                     </div>
                     <div class="img-container">
-                        <img src="assets\about_image3.jpg" alt="About Image 3">
+                        <img src="assets\about_image3.jpg" alt="Alfreds Johannes life and/or work images 3" loading="lazy"> 
                     </div>
                     <div class="img-container">
-                        <img src="assets\about_image4.jpg" alt="About Image 4">
+                        <img src="assets\about_image4.jpeg" alt="Alfreds Johannes life and/or work images 4" loading="lazy"> 
                     </div>
                 </div>
                 <div class="img-row">
                     <div class="img-container">
-                        <img src="assets\about_image5.jpg" alt="About Image 5">
+                        <img src="assets\about_image5.jpg" alt="Alfreds Johannes life and/or work images 5" loading="lazy"> 
                     </div>
                     <div class="img-container">
-                        <img src="assets\about_image6.jpg" alt="About Image 6">
+                        <img src="assets\about_image6.jpg" alt="Alfreds Johannes life and/or work images 6" loading="lazy"> 
                     </div>
                     <div class="img-container">
-                        <img src="assets\about_image7.jpg" alt="About Image 7">
+                        <img src="assets\about_image7.jpg" alt="Alfreds Johannes life and/or work images 7" loading="lazy"> 
                     </div>
                     <div class="img-container">
-                        <img src="assets\about_image8.jpg" alt="About Image 8">
+                        <img src="assets\about_image8.jpg" alt="Alfreds Johannes life and/or work images 8" loading="lazy"> 
                     </div>
                 </div>
             </div>
 
         </section>
 
+
+
         <!--Services section code-------------------------------------------- -->
 
-        <section class="services" id="services">
+        <section class="services" id="services" data-aos="fade-up" data-aos-duration="1000">
+
             <h2 class="heading">My <span>Services</span></h2>
 
             <div class="services-container">
@@ -249,216 +311,141 @@
             </div>
         </section>
 
+
+
+
+
+
         <!--Projects section code----------------------------------------------------- -->
 
-        <section class="projects" id="projects">
+        <section class="projects" id="projects" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="heading">My <span>Projects</span></h2>
-
+        
             <div class="projects-container">
-                <!-- Column 1 - First 10 projects -->
+                <!-- Left Column -->
                 <div class="projects-column">
-                    <!-- Project 1 -->
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project1" target="_blank">title here</a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project2" target="_blank"> title here </a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <!-- Add more projects as needed up to 10 in this column -->
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project3" target="_blank"> title here </a></h3>
-                        <p>---</p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project4" target="_blank">title here </a>
-                        </h3>
-                        <p>---</p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project5" target="_blank">title here</a></h3>
-                        <p>---</p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project6" target="_blank">title here </a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project7" target="_blank"> titl here </a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project8" target="_blank"> title here </a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project9" target="_blank"> title here</a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project10" target="_blank"> title here </a></h3>
-                        <p> --- </p>
-                    </div>
+                    <ol class="projects-list">
+                        <!-- Project 1 -->
+                        <li class="project-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-content">
+                                <h3><a href="https://github.com/dukejohannesA/project1" target="_blank">Machine Learning system for leak detection (research)</a></h3>
+                                <p>Water systems are plagued by leaks, my research was based on how we can use the current development of ML systems to solve this problem.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Pytorch</span>
+                                    <span class="tag">Tensorflow</span>
+                                    <span class="tag">Google Collab</span>
+                                    <span class="tag">Pyhton</span>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Project 2 -->
+                        <li class="project-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="project-content">
+                                <h3><a href="https://github.com/dukejohannesA/project2" target="_blank">Theft detector & Alert system</a></h3>
+                                <p>Side car mirror andcar badges get stolen from vehicles on a daily basis... this was decdicated to solving that problem. </p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">MPU snesor integratoin</span>
+                                    <span class="tag">Arduino IDE</span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Add more projects for left column -->
+                        <li class="project-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="project-content">
+                                <h3><a href="https://github.com/dukejohannesA/project5" target="_blank">Project Title</a></h3>
+                                <p>Short description of the project.</p>
+                                <div class="project-tags">
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Database</span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Continue with more projects -->
+                    </ol>
                 </div>
-
-                <!-- Column 2 - Next 10 projects -->
+                
+                <!-- Right Column -->
                 <div class="projects-column">
-                    <!-- Project 11 -->
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project11" target="_blank">title here</a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <!-- Project 12 -->
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project12" target="_blank">title here</a></h3>
-                        <p></p>
-                    </div>
-
-                    <!-- Add more projects as needed up to 10 in this column -->
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project13" target="_blank">title here</a></h3>
-                        <p></p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project14" target="_blank">title here</a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project15" target="_blank">title here</a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project16" target="_blank"> title here </a>
-                        </h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project17" target="_blank"> title here</a></h3>
-                        <p> --- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project18" target="_blank"> title here</a></h3>
-                        <p> --- .</p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project19" target="_blank"> title here</a></h3>
-                        <p> -- </p>
-                    </div>
-
-                    <div class="project-item">
-                        <h3><a href="https://github.com/dukejohannesA/project20" target="_blank">title here</a></h3>
-                        <p>  --- </p>
-                    </div>
+                    <ol class="projects-list" start="4">
+                        <!-- Project 4 -->
+                        <li class="project-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-content">
+                                <h3><a href="https://github.com/dukejohannesA/project3" target="_blank">Fronted Website Portfolio</a></h3>
+                                <p>I needed a way to show my self to the world... and the internet is the wolrd. </p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Javascript</span>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Project 5 -->
+                        <li class="project-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="project-content">
+                                <h3><a href="https://github.com/dukejohannesA/project5" target="_blank">Project Title</a></h3>
+                                <p>Short description of the project.</p>
+                                <div class="project-tags">
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Database</span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Add more projects for right column -->
+                        <li class="project-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-content">
+                                <h3><a href="https://github.com/dukejohannesA/project6" target="_blank">Project Title</a></h3>
+                                <p>Short description of the project.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Java</span>
+                                    <span class="tag">Android</span>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- Continue with more projects -->
+                    </ol>
                 </div>
             </div>
-
+        
             <!-- Profile links -->
             <div class="profile-links">
                 <a href="https://github.com/dukejohannesA" target="_blank" class="btn">View All GitHub Projects</a>
-                <a href="https://www.youtube.com/channel/YourChannelID" target="_blank" class="btn">Check My YouTube
-                    Channel</a>
+                <a href="https://www.youtube.com/channel/YourChannelID" target="_blank" class="btn">Check My YouTube Channel</a>
             </div>
         </section>
 
-        <!--Testimonial section code-->
 
-        <section class="testimonial" id="testimonial">
-
-            <div class="testimonial-box">
-                <h2 class="heading">Testimonial</h2>
-
-                <div class="wrapper">
-                    <div class="testimonial-item">
-                        <img src="assets\anna_image.jpg" alt="">
-
-                        <h2>Anna</h2>
-                        <div class="rating">
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempora iure eum praesentium
-                            quasi
-                            eligendi</p>
-                    </div>
-
-                    <div class="testimonial-item">
-                        <img src="assets\mark_image.jpg" alt="">
-
-                        <h2>Mark</h2>
-                        <div class="rating">
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempora iure eum praesentium
-                            quasi
-                            eligendi</p>
-                    </div>
+        <!--Testimonial section code--------------------------------------------------------------------------- -->
+        
 
 
-                    <div class="testimonial-item">
-                        <img src="assets\dave_image.jpg" alt="">
-
-                        <h2>Dave</h2>
-                        <div class="rating">
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                            <i class="bx bxs-star" id="star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempora iure eum praesentium
-                            quasi
-                            eligendi</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
 
 
         <!--Contact sectoin code-->
-
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
         
-            <form action="https://formspree.io/f/xgvanzpy" method="POST">
+            <!-- Replace "your-formspree-endpoint" with your actual Formspree form ID -->
+            <form id="contact-form" action="https://formspree.io/f/mqapnpnw" method="POST">
                 <div class="input-box">
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
                 </div>
-            
                 <div class="input-box">
-                    <input type="number" name="phone" placeholder="Phone Number">
-                    <input type="text" name="subject" placeholder="Email Subject">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <input type="tel" name="phone" placeholder="Phone Number (optional)">
                 </div>
                 <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <input type="hidden" name="_subject" value="New message from your portfolio site">
-                <input type="text" name="_gotcha" style="display:none">
-                <input type="submit" value="Send message" class="btn">
+                <button type="submit" class="btn">Send Message</button>
+                <div id="form-status" class="form-status"></div>
             </form>
         </section>
 
@@ -482,9 +469,11 @@
 
         <!-- JavaScript-->
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="script.js"></script>
-
-
-    </body>
+        <!--vanilla tilt js library-->>
+        <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+        <!-- email thing -->
+        
 
     </html>
