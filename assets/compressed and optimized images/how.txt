@@ -1,0 +1,25 @@
+Step 4: Performance Optimization (Images & Files)
+
+
+A. Compress and Optimize Images
+
+Why: Large image files are often the biggest contributors to slow page loads. Optimizing them reduces their file size significantly without sacrificing much (or any) visible quality.
+
+
+How:
+- Choose the Right Format:
+- Use .jpg for photographs (like your profile picture, testimonial photos).
+- Use .png if you need transparency.
+- Consider .webp for a modern format offering great compression (though ensure fallback for older browsers if needed, but most modern browsers support it).
+
+
+Use Optimization Tools: There are many free tools:
+
+- Online: TinyPNG / TinyJPG (handles both formats), Squoosh (by Google, more options), iLoveIMG.
+- Desktop: ImageOptim (Mac), RIOT (Windows).
+
+Action:
+- Gather all your images (profile_image.jpg, about_image1.jpg to about_image8.jpg, anna_image.jpg, mark_image.jpg, dave_image.jpg).
+- Upload them to a tool like TinyPNG or Squoosh.
+- Download the optimized versions.
+- Replace the original images in your assets folder with these smaller, optimized versions. Make sure the filenames remain exactly the same.
